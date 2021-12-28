@@ -27,8 +27,7 @@ $breakpoints: (
   md: 768px,
   lg: 1024px,
   xl: 1280px,
-  // xl: 1183px,
-    xxl: 1536px,
+  xxl: 1536px,
   xxxl: 1792px
 );
 
@@ -60,6 +59,6 @@ $utilities: (
   (font_family, false, true)
 );
 
-$container_default: xxl;
+$container_default: xl;
 
 @import "./../../node_modules/crumb-scss/src/variables";
