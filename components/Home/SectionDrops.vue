@@ -6,43 +6,65 @@
       <hr class="section_drops__separator" />
 
       <div class="section_drops__list">
-        <div class="nft_card" v-for="i in 5" :key="i">
-          <div class="nft_card__header">
-            <div class="nft_card__rarity">
-              <img
-                src="https://tokens.gala.games/images/sandbox-games/rarity/ancient.png"
-                alt="rarity image"
-              />
-            </div>
-            <div class="nft_card__image">
-              <img
-                src="https://tokens.gala.games/images/ion-games/echoes-of-empire/celestial-object/auroras-edge-the-shard-of-divinity-ancient.gif"
-                alt="nft_card image"
-              />
-            </div>
-          </div>
-
-          <div class="nft_card__body">
-            <div class="nft_card__title">
-              <p>Aurora's Edge - The Shard of Divinity (Ancient)</p>
-            </div>
-            <div class="nft_card__price">
-              <img
-                src="https://app.gala.games/_nuxt/img/GALA-icon.b642e24.png"
-                alt="coin image"
-              />
-              <span>1.392 m</span>
-            </div>
-            <div class="nft_card__subtitle"><p>Echoes of Empire</p></div>
-          </div>
-        </div>
+        <SharedNftCard
+          v-for="(item, i) in this.nftCards"
+          :key="i"
+          v-bind="item"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import SharedNftCard from "@/components/Shared/NftCard";
+
+export default {
+  components: {
+    SharedNftCard
+  },
+  data() {
+    return {
+      nftCards: [
+        {
+          name: "Aurora's Edge - The Shard of Divinity (Ancient)",
+          cost: "1.57 m",
+          game: "Echoes of Empire",
+          image: "/images/nft01.gif",
+          rarityImg: "/images/rarity01.png"
+        },
+        {
+          name: "Aurora's Edge - The Gallows of Time (Ancient)",
+          cost: "2.512 m",
+          game: "Echoes of Empire",
+          image: "/images/nft02.gif",
+          rarityImg: "/images/rarity01.png"
+        },
+        {
+          name: "Aurora's Edge - The Anvil of Gravity",
+          cost: "2.198 m",
+          game: "Echoes of Empire",
+          image: "/images/nft03.gif",
+          rarityImg: "/images/rarity01.png"
+        },
+        {
+          name: "Santa's Slay (Common)",
+          cost: "2,093",
+          game: "Spider Tanks",
+          image: "/images/nft04.gif",
+          rarityImg: "/images/rarity02.png"
+        },
+        {
+          name: "Dead Claim: Georgia (Epic)",
+          cost: "276,950",
+          game: "The Walking Dead: Empires",
+          image: "/images/nft05.gif",
+          rarityImg: "/images/rarity03.png"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style lang="scss" scoped>
@@ -53,7 +75,6 @@ export default {};
   margin-top: 48px;
 
   &__container {
-    // max-width: 1183px;
     margin: auto;
   }
 
@@ -68,78 +89,20 @@ export default {};
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 9px;
-  }
-}
 
-
-// //Nft Card//
-
-.nft_card {
-  display: flex;
-  flex-direction: column;
-  background: rgb(22, 22, 24);
-  cursor: pointer;
-  // border: 1px solid red;
-
-  // Card header
-  &__header {
-    position: relative;
-  }
-
-  &__rarity {
-    position: absolute;
-    padding: 4px;
-    right: 0;
-
-    & img {
-      width: 32px;
-      height: 32px;
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(2, 1fr);
     }
-  }
-
-  &__image {
-    width: 100%;
-    height: 100%;
-
-    img {
-      width: 100%;
-      height: 100%;
+    @include breakpoint(md) {
+      grid-template-columns: repeat(3, 1fr);
     }
-  }
-
-  // Card body
-
-  &__body {
-    padding: 8px;
-  }
-
-  &__title {
-    & p {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 500;
+    @include breakpoint(lg) {
+      grid-template-columns: repeat(4, 1fr);
     }
-  }
-
-  &__price {
-    & img {
-      width: 16px;
-      vertical-align: middle;
-    }
-
-    // & span{
-    //   vertical-align: middle;
-    // }
-  }
-
-  &__subtitle {
-    margin-top: 8px;
-
-    & p {
-      margin: 0;
-      font-size: 14px;
+    @include breakpoint(xl) {
+      grid-template-columns: repeat(5, 1fr);
     }
   }
 }
