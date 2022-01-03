@@ -6,7 +6,7 @@
           position="left"
           aspect-ratio="1"
           class="news_card__image"
-          :src="this.image"
+          :src="`${$router.options.base}${this.image}`"
           alt="news image"
         />
       </div>
@@ -52,6 +52,7 @@ export default {
   flex-direction: column;
   background: rgb(22, 22, 24);
   border-radius: 4px;
+  box-shadow: 1px 2px 14px 0 rgba(0, 0, 0, 0.15);
 
   @include breakpoint(sm) {
     flex-direction: row;

@@ -11,7 +11,12 @@
           v-for="(item, i) in this.games"
           :key="i"
         >
-          <v-img :aspect-ratio="16 / 9" :src="item" alt="game image" />
+          <v-img
+            class="section_games__image"
+            :aspect-ratio="16 / 9"
+            :src="`${$router.options.base}${item}`"
+            alt="game image"
+          />
         </div>
       </div>
     </div>
@@ -23,14 +28,14 @@ export default {
   data() {
     return {
       games: [
-        "/images/game01.png",
-        "/images/game02.png",
-        "/images/game03.png",
-        "/images/game04.jpg",
-        "/images/game05.png",
-        "/images/game06.png",
-        "/images/game07.jpg",
-        "/images/game08.png"
+        "images/game01.png",
+        "images/game02.png",
+        "images/game03.png",
+        "images/game04.jpg",
+        "images/game05.png",
+        "images/game06.png",
+        "images/game07.jpg",
+        "images/game08.png"
       ]
     };
   }
@@ -43,7 +48,6 @@ export default {
 // -----Section Games
 .section_games {
   margin-top: 48px;
-  cursor: pointer;
 
   &__container {
     // max-width: 1183px;
@@ -80,6 +84,11 @@ export default {
     width: 100%;
     height: 100%;
     box-shadow: 1px 2px 14px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &__image {
+    border-radius: 4px;
+    cursor: pointer;
   }
 }
 </style>

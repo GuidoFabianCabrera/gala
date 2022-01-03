@@ -1,8 +1,8 @@
 <template>
-  <div class="page_home pb-15 pt-15" style="background-color: rgb(43, 43, 48)">
-    <!-- <HomeSectionCarousel /> -->
+  <div class="page_home">
+    <HomeSectionCarousel />
 
-    <!-- <HomeSectionWarning /> -->
+    <HomeSectionWarning v-on:test="updateShowWarning" v-show="!this.close" />
 
     <HomeSectionNameless />
 
@@ -38,10 +38,24 @@ export default {
     HomeSectionGames,
     HomeSectionBanner,
     HomeSectionNews
+  },
+  data() {
+    return {
+      close: false
+    };
+  },
+  methods: {
+    updateShowWarning(a) {
+      this.close = true;
+    }
   }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/utils";
+.page_home {
+  margin-top: 60px;
+  background-color: rgb(43, 43, 48);
+}
 </style>

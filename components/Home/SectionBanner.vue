@@ -4,12 +4,12 @@
       <v-img
         class="section_banner__image"
         :aspect-ratio="2 / 1"
-        src="/images/bannerMobile.jpg"
+        :src="`${$router.options.base}images/bannerMobile.jpg`"
         alt="banner"
       />
       <v-img
         class="section_banner__imageDesktop"
-        src="/images/banner.jpg"
+        :src="`${$router.options.base}images/banner.jpg`"
         alt="banner"
       />
     </div>

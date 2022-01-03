@@ -30,36 +30,36 @@ export default {
           name: "Cannon (Common Weapon)",
           cost: "342",
           game: "Spider Tanks",
-          image: "/images/nft06.png",
-          rarityImg: "/images/rarity02.png"
+          image: "images/nft06.png",
+          rarityImg: "images/rarity02.png"
         },
         {
           name: "Santa's Slay (Common)",
           cost: "2,093",
           game: "Spider Tanks",
-          image: "/images/nft04.gif",
-          rarityImg: "/images/rarity02.png"
+          image: "images/nft04.gif",
+          rarityImg: "images/rarity02.png"
         },
         {
           name: "Human Exemplar: The Greencloaks",
           cost: "1,361",
           game: "Mirandus",
-          image: "/images/nft07.png",
-          rarityImg: "/images/rarity04.png"
+          image: "images/nft07.png",
+          rarityImg: "images/rarity04.png"
         },
         {
           name: "Human Exemplar: The Weavers",
           cost: "1,256",
           game: "Mirandus",
-          image: "/images/nft09.png",
-          rarityImg: "/images/rarity04.png"
+          image: "images/nft09.png",
+          rarityImg: "images/rarity04.png"
         },
         {
           name: "Bandit (Common Body)",
           cost: "243",
           game: "Spider Tanks",
-          image: "/images/nft08.png",
-          rarityImg: "/images/rarity02.png"
+          image: "images/nft08.png",
+          rarityImg: "images/rarity02.png"
         }
       ]
     };

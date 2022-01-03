@@ -30,36 +30,36 @@ export default {
           name: "Aurora's Edge - The Shard of Divinity (Ancient)",
           cost: "1.57 m",
           game: "Echoes of Empire",
-          image: "/images/nft01.gif",
-          rarityImg: "/images/rarity01.png"
+          image: "images/nft01.gif",
+          rarityImg: "images/rarity01.png"
         },
         {
           name: "Aurora's Edge - The Gallows of Time (Ancient)",
           cost: "2.512 m",
           game: "Echoes of Empire",
-          image: "/images/nft02.gif",
-          rarityImg: "/images/rarity01.png"
+          image: "images/nft02.gif",
+          rarityImg: "images/rarity01.png"
         },
         {
           name: "Aurora's Edge - The Anvil of Gravity",
           cost: "2.198 m",
           game: "Echoes of Empire",
-          image: "/images/nft03.gif",
-          rarityImg: "/images/rarity01.png"
+          image: "images/nft03.gif",
+          rarityImg: "images/rarity01.png"
         },
         {
           name: "Santa's Slay (Common)",
           cost: "2,093",
           game: "Spider Tanks",
-          image: "/images/nft04.gif",
-          rarityImg: "/images/rarity02.png"
+          image: "images/nft04.gif",
+          rarityImg: "images/rarity02.png"
         },
         {
           name: "Dead Claim: Georgia (Epic)",
           cost: "276,950",
           game: "The Walking Dead: Empires",
-          image: "/images/nft05.gif",
-          rarityImg: "/images/rarity03.png"
+          image: "images/nft05.gif",
+          rarityImg: "images/rarity03.png"
         }
       ]
     };

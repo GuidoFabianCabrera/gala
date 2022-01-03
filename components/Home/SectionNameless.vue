@@ -7,7 +7,7 @@
           <div class="section_nameless__left">
             <v-img
               class="section_nameless__image_gala"
-              src="/images/gala.png"
+              :src="`${$router.options.base}images/gala.png`"
               alt="gala pc"
             />
           </div>
@@ -28,12 +28,12 @@
           <div class="section_nameless__left">
             <v-img
               class="section_nameless__image_discord"
-              src="/images/discord01.png"
+              :src="`${$router.options.base}images/discord01.png`"
               alt="discord image"
             />
             <v-img
               class="section_nameless__image_users"
-              src="/images/discord02.png"
+              :src="`${$router.options.base}images/discord02.png`"
               alt="users image"
             />
           </div>
@@ -69,6 +69,8 @@ export default {};
 }
 
 .section_nameless {
+  margin-top: 30px;
+
   .section_nameless__container {
     display: flex;
     flex-direction: column;

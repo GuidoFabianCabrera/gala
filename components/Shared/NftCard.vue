@@ -4,12 +4,16 @@
       <div class="nft_card__rarity_container">
         <img
           class="nft_card__rarity"
-          :src="this.rarityImg"
+          :src="`${$router.options.base}${this.rarityImg}`"
           alt="rarity image"
         />
       </div>
       <div class="nft_card__image_container">
-        <img class="nft_card__image" :src="this.image" alt="nft_card image" />
+        <img
+          class="nft_card__image"
+          :src="`${$router.options.base}${this.image}`"
+          alt="nft_card image"
+        />
       </div>
     </div>
 
